@@ -46,6 +46,10 @@ variable "https_listeners_count" {
   default     = 0
 }
 
+variable "http_redirect_enabled" {
+  default = 0
+}
+
 variable "http_tcp_listeners" {
   description = "A list of maps describing the HTTPS listeners for this ALB. Required key/values: port, protocol. Optional key/values: target_group_index (defaults to 0)"
   type        = list(map(string))
